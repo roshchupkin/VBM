@@ -1,20 +1,12 @@
 
 
 import sys
-# sys.path.append('/scratch/groshchupkin/python_scripts/ubuntu_32')
-# sys.path.append('/scratch/groshchupkin/python_scripts/ubuntu_32/plot_brain/')
-# sys.path.append('/scratch/groshchupkin/python_scripts/ubuntu_32/Tools/')
-# sys.path.append('/scratch/groshchupkin/python_scripts/ubuntu_32/MRI_project/')
-# sys.path.append('/scratch/groshchupkin/python_scripts/ubuntu_32/Profilers/')
-# sys.path.append('/scratch/groshchupkin/python_scripts/ubuntu_32/Genetic/')
-# sys.path.append('/scratch/groshchupkin/python_scripts/ubuntu_32/Regression/')
-
 sys.path.append('/scratch/groshchupkin/RotterdamStudy/packages/vbm/scripts/tools/')
 sys.path.append('/scratch/groshchupkin/RotterdamStudy/packages/vbm/scripts/python/')
 
 import os
 import nipy
-import numpy as np
+import numpy as nps
 from .python.timer import Timer
 import argparse
 
