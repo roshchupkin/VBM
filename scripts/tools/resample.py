@@ -1,10 +1,13 @@
 import sys
 sys.path.append('/scratch/groshchupkin/python_scripts/myenv/lib/python2.7/site-packages/')
 import numpy as np
+sys.path.insert(0,'/home/groshchupkin/.local/lib/python2.7/site-packages/')
 import nibabel
 from nilearn import image
 import argparse
 import os
+import nilearn
+print nilearn.__version__
 
 def resample(input, ref, output):
     image_to_resample = nibabel.load(input)
@@ -12,7 +15,8 @@ def resample(input, ref, output):
     resampled_image =image.resample_img(image_to_resample,target_affine = image2.get_affine(),
                                         interpolation="nearest",
                                         target_shape=image2.shape)
-    nibabel.save(resampled_image,output)
+    #nibabel.save(resampled_image,'{}_res.nii.gz'.format(output) )
+    nibabel.save(resampled_image, output)
 
 
 parser = argparse.ArgumentParser(description='Script to resample nifti image from 1mm FSL MNI to 1mm RS MNI space')

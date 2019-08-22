@@ -1,5 +1,7 @@
 import os
 import sys
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
