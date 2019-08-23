@@ -15,9 +15,6 @@ args = parser.parse_args()
 print args
 
 
-if len(args.data)!=len(args.sub_list):
-	raise ValueError('Input number of phenotypes folder should be the same as number of input subject tables')
-
 d=None
 for i in args.data:
 	if not os.path.isfile('{}/{}'.format(i,args.roi)):
@@ -29,6 +26,9 @@ for i in args.data:
 
 
 if args.sub_list is not None:
+
+	if len(args.data) != len(args.sub_list):
+		raise ValueError('Input number of phenotypes folder should be the same as number of input subject tables')
 
 	df_ids=None
 	for i in args.sub_list:
