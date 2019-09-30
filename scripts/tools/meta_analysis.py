@@ -60,11 +60,17 @@ T = nipy.load_image(args.template)
 
 T._data[:, :, :] = 0
 T._data = p
+m=np.isnan(T._data)
+print "{} NaNs".format(m.sum())
+T._data[m]=1
 nipy.save_image(T,'{}/ma_p_value.nii.gz'.format(args.out))
 
 
 T._data[:, :, :] = 0
 T._data = b
+m=np.isnan(T._data)
+print "{} NaNs".format(m.sum())
+T._data[m]=0
 nipy.save_image(T,'{}/ma_beta.nii.gz'.format(args.out))
 
 
