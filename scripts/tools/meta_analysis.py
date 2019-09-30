@@ -35,6 +35,7 @@ parser = argparse.ArgumentParser(description='Run VBM inverse-variance Meta-anal
 parser.add_argument("-se",nargs='+',  required=True, type=str, help="paths to se maps")
 parser.add_argument("-beta",nargs='+',  required=True, type=str, help="paths to beta maps")
 parser.add_argument("-template", required=True, type=str, help="path to MNI template")
+parser.add_argument("-out", required=True, type=str, help="path to save results")
 
 args = parser.parse_args()
 print args
